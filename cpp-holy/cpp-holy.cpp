@@ -2,10 +2,76 @@
 //
 
 #include <iostream>
+using namespace std;
+
+int cinInt();
+char* cinChar();
 
 int main()
 {
     std::cout << "Hello World!\n";
+    std::cout << "Hello World!" << std::endl;
+    int a = 1, b = 0;
+    if (a>b)
+    {
+        cout<< a<<endl;
+    }
+    else
+    {
+        cout<< b<<endl;
+    }
+    //------------------------------
+    int i;
+    char s[1024];
+    cout << "Enter : ";
+    cin >> i >> s;
+    if (cin.fail())
+        cout << "Wrong input." << endl; // 에러 메시지 출력
+    else
+    {
+    cout << "i:" << i << endl;
+    cout << "s:" << s << endl;
+    }
+    cin.clear(); // 오류스트림을 초기화
+    cin.ignore(256, '\n'); // 입력버퍼를 비움
+
+    //------------------------------
+    cout << "cinInt:" << cinInt() << endl;
+    cout << "cinChar:" << cinChar() << endl;
+
+    return 0;
+}
+
+int cinInt() {
+    int retNum;
+
+    cout << "Enter int: ";
+    cin >> retNum;
+
+    // 잘못된 입력을 받았을 경우
+    if (cin.fail()) {
+        cout << "Wrong cinInt. Retry!" << endl; // 에러 메시지 출력
+        cin.clear(); // 오류스트림을 초기화
+        cin.ignore(256, '\n'); // 입력버퍼를 비움
+        return cinInt(); // 함수를 재호출한다
+    }
+    return retNum;
+}
+
+char* cinChar() {
+    char s[1024]="";
+
+    cout << "Enter char: ";
+    cin >> s;
+
+    // 잘못된 입력을 받았을 경우
+    if (cin.fail()) {
+        cout << "Wrong cinChar. Retry!" << endl; // 에러 메시지 출력
+        cin.clear(); // 오류스트림을 초기화
+        cin.ignore(256, '\n'); // 입력버퍼를 비움
+        return cinChar(); // 함수를 재호출한다
+    }
+    return s;
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
