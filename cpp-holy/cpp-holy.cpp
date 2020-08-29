@@ -2,10 +2,27 @@
 //
 
 #include <iostream>
+#include <exception>
+#include "stdioEx.h"
+
+//#define PI 3.14159 // 이렇게는 하지 말자
+
+
 using namespace std;
 
 int cinInt();
+template <typename T>
+void out(T);
 char* cinChar();
+
+class myException : public exception
+{
+    virtual char const* what() const
+    {
+        return "Unknown exception";
+    }
+} me;
+
 
 namespace my {
     int c = 4;
@@ -13,7 +30,76 @@ namespace my {
 
 int main()
 {
-    int 한글 = 0; // C++11
+    {
+        stdioEx::test();
+    }
+
+    {
+        const int v= cinInt();//입력받은 값으로 상수 초기화 가능
+        out(("v:"+v));
+        try
+        {
+            constexpr int c = 31+85;//컴파일시에 초기화
+            out("c:"+c);
+        }
+        catch (exception& e)
+        {
+            std::cout << "c 오류:" << e.what() << "\n";
+        }
+    }
+
+    {
+        const double PI{ 3.14159 };
+        try
+        {
+            //PI = 1234;//컴파일 에러
+        }
+        catch (exception& e)
+        {
+            std::cout << "오류:" << e.what() << "\n";
+        }
+    }
+
+    {   // 예외처리
+        try
+        {
+            throw me;
+        }
+        catch (exception& e)
+        {
+            std::cout << "오류:" << e.what() << "\n";
+        }
+    }
+
+    {
+        int 한글 = 4560; // C++11
+        int 값(2354);
+        int ㄱ = { 37 }; 
+        auto v = 10; // C++11 자료형 자동 처리
+        std::cout << 한글 << "\n";
+        std::cout << 값 << "\n";
+        std::cout << ㄱ << "\n";
+        std::cout << 10 << "\n";
+        try
+        {
+            short x = ㄱ;// 오류 안나네
+            std::cout << x << "\n";
+        }
+        catch (const std::exception& e)
+        {
+            std::cout << "오류:" << e.what() << "\n";
+        }        
+        try
+        {
+            float x = 값;
+            std::cout << x << "\n";
+        }
+        catch (const std::exception& e)
+        {
+            std::cout << "오류:" << e.what() << "\n";
+        }
+    }
+
     {
         int v;
         v = 15;//
@@ -90,6 +176,7 @@ int main()
     return 0;
 }
 
+
 int cinInt() {
     int retNum;
 
@@ -104,6 +191,12 @@ int cinInt() {
         return cinInt(); // 함수를 재호출한다
     }
     return retNum;
+}
+
+template <typename T>
+void out(T t)
+{
+    cout << t << endl;
 }
 
 char* cinChar() {
