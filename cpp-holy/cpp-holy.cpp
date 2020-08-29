@@ -4,24 +4,14 @@
 #include <iostream>
 #include <exception>
 #include "stdioEx.h"
+#include "exceptionEx.h"
+#include "constEx.h"
+#include "ioEx.h"
 
 //#define PI 3.14159 // 이렇게는 하지 말자
 
-
 using namespace std;
 
-int cinInt();
-template <typename T>
-void out(T);
-char* cinChar();
-
-class myException : public exception
-{
-    virtual char const* what() const
-    {
-        return "Unknown exception";
-    }
-} me;
 
 
 namespace my {
@@ -31,45 +21,14 @@ namespace my {
 int main()
 {
     {
-        stdioEx::test();
+        constEx::f(7);
+        //stdioEx::test();//정상
     }
-
     {
-        const int v= cinInt();//입력받은 값으로 상수 초기화 가능
-        out(("v:"+v));
-        try
-        {
-            constexpr int c = 31+85;//컴파일시에 초기화
-            out("c:"+c);
-        }
-        catch (exception& e)
-        {
-            std::cout << "c 오류:" << e.what() << "\n";
-        }
+        static_cast<int>(5 / 10.0);
     }
 
-    {
-        const double PI{ 3.14159 };
-        try
-        {
-            //PI = 1234;//컴파일 에러
-        }
-        catch (exception& e)
-        {
-            std::cout << "오류:" << e.what() << "\n";
-        }
-    }
 
-    {   // 예외처리
-        try
-        {
-            throw me;
-        }
-        catch (exception& e)
-        {
-            std::cout << "오류:" << e.what() << "\n";
-        }
-    }
 
     {
         int 한글 = 4560; // C++11
@@ -153,69 +112,15 @@ int main()
         }
     }
     //------------------------------
-    {
-        int i;
-        char s[1024];
-        cout << "Enter : ";
-        cin >> i >> s;
-        if (cin.fail())
-            cout << "Wrong input." << endl; // 에러 메시지 출력
-        else
-        {
-            cout << "i:" << i << endl;
-            cout << "s:" << s << endl;
-        }
-        cin.clear(); // 오류스트림을 초기화
-        cin.ignore(256, '\n'); // 입력버퍼를 비움
-    }
+
     //------------------------------
     {
-        cout << "cinInt:" << cinInt() << endl;
-        cout << "cinChar:" << cinChar() << endl;
+        cout << "cinInt:" << ioEx::cinInt() << endl;
+        cout << "cinChar:" << ioEx::cinChar() << endl;
     }
     return 0;
 }
 
-
-int cinInt() {
-    int retNum;
-
-    cout << "Enter int: ";
-    cin >> retNum;
-
-    // 잘못된 입력을 받았을 경우
-    if (cin.fail()) {
-        cout << "Wrong cinInt. Retry!" << endl; // 에러 메시지 출력
-        cin.clear(); // 오류스트림을 초기화
-        cin.ignore(256, '\n'); // 입력버퍼를 비움
-        return cinInt(); // 함수를 재호출한다
-    }
-    return retNum;
-}
-
-template <typename T>
-void out(T t)
-{
-    cout << t << endl;
-}
-
-char* cinChar() {
-    char s[1024]="";
-
-    cout << "Enter char: ";
-    cin >> s;
-
-    // 잘못된 입력을 받았을 경우
-    if (cin.fail()) {
-        cout << "Wrong cinChar. Retry!" << endl; // 에러 메시지 출력
-        cin.clear(); // 오류스트림을 초기화
-        cin.ignore(256, '\n'); // 입력버퍼를 비움
-        return cinChar(); // 함수를 재호출한다
-    }
-    return s;
-}
-
-// 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
 // 프로그램 디버그: <F5> 키 또는 [디버그] > [디버깅 시작] 메뉴
 
 // 시작을 위한 팁: 

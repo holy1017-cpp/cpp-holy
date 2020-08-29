@@ -147,10 +147,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="constEx.cpp" />
     <ClCompile Include="cpp-holy.cpp" />
+    <ClCompile Include="exceptionEx.cpp" />
+    <ClCompile Include="ioEx.cpp" />
     <ClCompile Include="stdioEx.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="constEx.h" />
+    <ClInclude Include="exceptionEx.h" />
+    <ClInclude Include="ioEx.h" />
     <ClInclude Include="stdioEx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
