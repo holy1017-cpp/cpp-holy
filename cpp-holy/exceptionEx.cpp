@@ -1,23 +1,24 @@
+#pragma once
 #include <exception>
 #include <iostream>
 #include "exceptionEx.h"
 
 using namespace std;
 
-namespace exceptionEx {
-    char const* myException::what() const
-    {
-        return "Unknown exception";
-    }
 
-    void test() {   // 抗寇贸府
-        try
-        {
-            throw me;
-        }
-        catch (exception& e)
-        {
-            std::cout << "myException:" << e.what() << "\n";
-        }
+char const* exceptionEx::myException::what() const
+{
+    return "Unknown exception";
+}
+
+void exceptionEx::test() {   // 抗寇贸府
+    try
+    {
+        throw myException();
+    }
+    catch (exception& e)
+    {
+        std::cout << "myException:" << e.what() << "\n";
     }
 }
+

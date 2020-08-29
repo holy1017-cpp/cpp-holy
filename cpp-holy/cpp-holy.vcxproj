@@ -148,16 +148,27 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="constEx.cpp" />
-    <ClCompile Include="cpp-holy.cpp" />
+    <ClCompile Include="forWhile.cpp" />
+    <ClCompile Include="functionEx.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="exceptionEx.cpp" />
     <ClCompile Include="ioEx.cpp" />
+    <ClCompile Include="pointerEx.cpp" />
     <ClCompile Include="stdioEx.cpp" />
+    <ClCompile Include="structEx.cpp" />
+    <ClCompile Include="varEx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constEx.h" />
     <ClInclude Include="exceptionEx.h" />
+    <ClInclude Include="forWhile.h" />
+    <ClInclude Include="functionEx.h" />
     <ClInclude Include="ioEx.h" />
+    <ClInclude Include="namespaceEx.h" />
+    <ClInclude Include="pointerEx.h" />
     <ClInclude Include="stdioEx.h" />
+    <ClInclude Include="structEx.h" />
+    <ClInclude Include="varEx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

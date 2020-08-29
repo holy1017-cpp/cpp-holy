@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include "ioEx.h"
 using namespace std;
@@ -57,8 +58,12 @@ namespace ioEx {
         }
         cin.clear(); // 오류스트림을 초기화
         cin.ignore(256, '\n'); // 입력버퍼를 비움
+
     }
-
-
+        //------------------------------
+     void test2(){
+            cout << "cinInt:" << ioEx::cinInt() << endl;
+            cout << "cinChar:" << ioEx::cinChar() << endl;
+        }
 
 }
