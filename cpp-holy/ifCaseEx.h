@@ -1,22 +1,15 @@
 #pragma once
 
-#ifndef varEx_H
-#define varEx_H
+#ifndef ifCaseEx_H
+#define ifCaseEx_H
 
 #include <iostream>
 
 using namespace std;
 
-namespace varEx {
-
-
-
-
+namespace ifCaseEx {	
 
 	void test();
-
-
-
 }
 
 #endif

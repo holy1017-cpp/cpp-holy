@@ -1,22 +1,14 @@
 #pragma once
 
-#ifndef varEx_H
-#define varEx_H
+#ifndef castEx_H
+#define castEx_H
 
 #include <iostream>
 
 using namespace std;
 
-namespace varEx {
-
-
-
-
-
+namespace castEx {
 	void test();
-
-
-
 }
 
 #endif

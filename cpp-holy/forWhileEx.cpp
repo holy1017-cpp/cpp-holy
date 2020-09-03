@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
-#include "forWhile.h"
+
+#include "forWhileEx.h"
 
 void forWhile::testFor()
 {

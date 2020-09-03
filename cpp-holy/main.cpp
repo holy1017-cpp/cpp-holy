@@ -8,10 +8,17 @@
 #include "exceptionEx.h"
 #include "constEx.h"
 #include "ioEx.h"
-#include "forWhile.h"
+#include "forWhileEx.h"
 #include "structEx.h"
 #include "pointerEx.h"
 #include "functionEx.h"
+#include "inputWhileEx.h"
+#include "threadEx.h"
+#include "functionEx.h"
+#include "varEx.h"
+#include "classEx.h"
+
+
 
 //#define PI 3.14159 // 이렇게는 하지 말자
 
@@ -19,16 +26,23 @@ using namespace std;
 
 
 
-namespace my {
-    int c = 4;
-}
-
 int main()
 {
-    {
+    {   
+        classEx::test();
+        //functionEx::testStcut();
+        //functionEx::testStPrint();
+        //functionEx::testStPrint2();
+        //functionEx::testStPrint3();
+        //functionEx::testStPrint4();
+        //functionEx::testswap();
+        //threadEx::test();
+        //threadEx::test2();
+        //threadEx::testMutex();
+        //inputWhileEx::test();
         //functionEx::test();
         //functionEx::test3();
-        functionEx::test4();
+        //functionEx::test4();
         //pointerEx::testPointer();
         //pointerEx::testArr2();
         //structRx::test();
@@ -37,30 +51,9 @@ int main()
         //forWhile::testFor();
         //forWhile::testForRang();
         //forWhile::testForRang2();
-        forWhile::testTrim();
-
+        //forWhile::testTrim();
         //exceptionEx::test();
     }
-    {
-        static_cast<int>(5 / 10.0);
-    }
-
-
-    {
-        int b = 0;
-        if (my::c > b)
-        {
-            cout << my::c << endl;
-        }
-        else
-        {
-            cout << b << endl;
-        }
-    }
-    //------------------------------
-
-    //------------------------------
-
     return 0;
 }
 

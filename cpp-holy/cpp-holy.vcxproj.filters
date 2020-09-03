@@ -30,9 +30,6 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="forWhile.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="structEx.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -43,6 +40,27 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="varEx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="castEx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="inputWhileEx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ifCaseEx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="forWhileEx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="threadEx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="calculationEx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="classEx.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -59,9 +77,6 @@
     <ClInclude Include="exceptionEx.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="forWhile.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="structEx.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -75,6 +90,27 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="varEx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="castEx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="inputWhileEx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ifCaseEx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="forWhileEx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="threadEx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="calculationEx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="classEx.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

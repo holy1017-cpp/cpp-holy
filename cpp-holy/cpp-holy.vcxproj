@@ -147,27 +147,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="calculationEx.cpp" />
+    <ClCompile Include="castEx.cpp" />
+    <ClCompile Include="classEx.cpp" />
     <ClCompile Include="constEx.cpp" />
-    <ClCompile Include="forWhile.cpp" />
+    <ClCompile Include="forWhileEx.cpp" />
     <ClCompile Include="functionEx.cpp" />
+    <ClCompile Include="ifCaseEx.cpp" />
+    <ClCompile Include="inputWhileEx.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="exceptionEx.cpp" />
     <ClCompile Include="ioEx.cpp" />
     <ClCompile Include="pointerEx.cpp" />
     <ClCompile Include="stdioEx.cpp" />
     <ClCompile Include="structEx.cpp" />
+    <ClCompile Include="threadEx.cpp" />
     <ClCompile Include="varEx.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="calculationEx.h" />
+    <ClInclude Include="castEx.h" />
+    <ClInclude Include="classEx.h" />
     <ClInclude Include="constEx.h" />
     <ClInclude Include="exceptionEx.h" />
-    <ClInclude Include="forWhile.h" />
+    <ClInclude Include="forWhileEx.h" />
     <ClInclude Include="functionEx.h" />
+    <ClInclude Include="ifCaseEx.h" />
+    <ClInclude Include="inputWhileEx.h" />
     <ClInclude Include="ioEx.h" />
     <ClInclude Include="namespaceEx.h" />
     <ClInclude Include="pointerEx.h" />
     <ClInclude Include="stdioEx.h" />
     <ClInclude Include="structEx.h" />
+    <ClInclude Include="threadEx.h" />
     <ClInclude Include="varEx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
