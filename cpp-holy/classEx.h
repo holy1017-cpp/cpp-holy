@@ -41,6 +41,11 @@ namespace classEx {
 			print();
 		}
 
+		// 복사 생성자
+		Counter(const Counter& o) {
+
+		}
+
 		void CReset() {
 			this->c = new char[1];
 			this->c[0] = 0;

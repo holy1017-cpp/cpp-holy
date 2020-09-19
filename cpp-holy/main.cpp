@@ -29,6 +29,13 @@ using namespace std;
 int main()
 {
     {   
+        {
+            double a=12,b=3,c=4,d=++c+ ++a ;
+            cout << a << endl;
+            cout << b << endl;
+            cout << c << endl;
+            cout << d << endl;
+        }
         classEx::test();
         //functionEx::testStcut();
         //functionEx::testStPrint();
