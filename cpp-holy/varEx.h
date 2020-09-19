@@ -14,6 +14,7 @@ namespace varEx {
 
 
 	void test();
+	void test2();
 
 
 

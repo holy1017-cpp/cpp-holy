@@ -2,10 +2,41 @@
 
 namespace varEx {
 
+    class CTest {
+    public:
+        CTest add(const CTest c) {
+            CTest d;
+            return d;
+        }
+    };
 
+    void test2() {
+        {
+            // 참조
+
+            // l-value 참조
+
+            CTest t1;
+            CTest& t2 = t1;
+            //int& a = 10; // 오류
+            const int& b = 20;
+
+
+            // r-value 참조
+
+            int&& c = 30;
+            CTest&& t3 = t1.add(t2);
+            //CTest&& t4 = t1; // error
+            cout << &t3 << endl;
+            cout << c << endl;
+        }
+    }
 
     void test()
     {
+
+
+
         {
             int 한글 = 4560; // C++11
             int 값(2354);

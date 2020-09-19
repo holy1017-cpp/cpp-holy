@@ -8,7 +8,7 @@ namespace guidEx {
 
     void CGUID::print()
     {
-        wcout << s << ":";
+        wcout << s << " : ";
     }
 
     void CGUID::printn()
