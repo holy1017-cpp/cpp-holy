@@ -17,6 +17,7 @@
 #include "functionEx.h"
 #include "varEx.h"
 #include "classEx.h"
+#include "guidEx.h"
 
 
 
@@ -36,7 +37,12 @@ int main()
             cout << c << endl;
             cout << d << endl;
         }
+
+
         classEx::test();
+
+        //guidEx::test();
+
         //functionEx::testStcut();
         //functionEx::testStPrint();
         //functionEx::testStPrint2();

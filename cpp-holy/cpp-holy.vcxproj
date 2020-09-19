@@ -153,6 +153,7 @@
     <ClCompile Include="constEx.cpp" />
     <ClCompile Include="forWhileEx.cpp" />
     <ClCompile Include="functionEx.cpp" />
+    <ClCompile Include="guidEx.cpp" />
     <ClCompile Include="ifCaseEx.cpp" />
     <ClCompile Include="inputWhileEx.cpp" />
     <ClCompile Include="main.cpp" />
@@ -172,6 +173,7 @@
     <ClInclude Include="exceptionEx.h" />
     <ClInclude Include="forWhileEx.h" />
     <ClInclude Include="functionEx.h" />
+    <ClInclude Include="guidEx.h" />
     <ClInclude Include="ifCaseEx.h" />
     <ClInclude Include="inputWhileEx.h" />
     <ClInclude Include="ioEx.h" />
